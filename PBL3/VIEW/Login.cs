@@ -43,49 +43,60 @@ namespace PBL3
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-           SqlConnection cnn = new SqlConnection(connect);
+            SqlConnection cnn = new SqlConnection(connect);
             cnn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Role FROM Account WHERE Username = @Username AND Password = @Password", cnn);
+            SqlCommand cmd = new SqlCommand("SELECT Username, Password, Role FROM Account WHERE Username = @Username ", cnn);
             cmd.Parameters.AddWithValue("@Username", username);
-            cmd.Parameters.AddWithValue("@Password", password);
-            object result = cmd.ExecuteScalar();
+            SqlDataReader reader = cmd.ExecuteReader();
 
-            if (result != null)
+            if (reader.Read())
             {
-                string role = result.ToString();
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string dbUsername = reader["Username"].ToString();
+                string dbPassword = reader["Password"].ToString();
+                string role = reader["Role"].ToString();
 
-            
-                if (role.ToLower() == "admin")
+                if (String.Equals(username, dbUsername, StringComparison.Ordinal) &&
+                                String.Equals(password, dbPassword, StringComparison.Ordinal))
                 {
-                    AdminForm adminForm = new AdminForm();
-                    this.Hide();
-                    adminForm.ShowDialog();
-                    this.Show();
-                }
-                else if (role.ToLower() == "staff")
-                {
-                    StaffForm staffForm = new StaffForm();
-                    this.Hide();
-                    staffForm.ShowDialog();
-                    this.Show();
+                    if (role.ToLower() == "admin")
+                    {
+                        AdminForm adminForm = new AdminForm();
+                        this.Hide();
+                        adminForm.ShowDialog();
+                        this.Show();
+                    }
+                    else if (role.ToLower() == "staff")
+                    {
+                        StaffForm staffForm = new StaffForm();
+                        this.Hide();
+                        staffForm.ShowDialog();
+                        this.Show();
+                    }
+                    else
+                    {
+                        CustomerForm customerForm = new CustomerForm();
+                        this.Hide();
+                        customerForm.ShowDialog();
+                        this.Show();
+                    }
                 }
                 else
                 {
-                    CustomerForm customerForm = new CustomerForm();
-                    this.Hide();
-                    customerForm.ShowDialog();
-                    this.Show();
-                }
+                    MessageBox.Show("Mật khẩu hoặc tài khoản không đúng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
            
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
             cnn.Close();
         }
+
+        private void bntRegister_Click(object sender, EventArgs e)
+        {
+            RegisterForm registF = new RegisterForm();
+            registF.ShowDialog();
         }
     }
+}
+
 

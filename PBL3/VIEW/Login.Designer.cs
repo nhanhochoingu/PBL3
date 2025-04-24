@@ -35,6 +35,8 @@ namespace PBL3
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.picturebox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bntRegister = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.butExit = new System.Windows.Forms.Button();
             this.butLogin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,6 +65,8 @@ namespace PBL3
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bntRegister);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.butExit);
             this.panel1.Controls.Add(this.butLogin);
             this.panel1.Controls.Add(this.panel3);
@@ -73,12 +77,34 @@ namespace PBL3
             this.panel1.Size = new System.Drawing.Size(507, 618);
             this.panel1.TabIndex = 1;
             // 
+            // bntRegister
+            // 
+            this.bntRegister.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bntRegister.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bntRegister.Location = new System.Drawing.Point(291, 548);
+            this.bntRegister.Name = "bntRegister";
+            this.bntRegister.Size = new System.Drawing.Size(134, 39);
+            this.bntRegister.TabIndex = 6;
+            this.bntRegister.Text = "Đăng ký";
+            this.bntRegister.UseVisualStyleBackColor = false;
+            this.bntRegister.Click += new System.EventHandler(this.bntRegister_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(80, 557);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(205, 21);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Bạn chưa có tài khoản ?";
+            // 
             // butExit
             // 
             this.butExit.BackColor = System.Drawing.SystemColors.Highlight;
             this.butExit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.butExit.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.butExit.Location = new System.Drawing.Point(24, 481);
+            this.butExit.Location = new System.Drawing.Point(24, 464);
             this.butExit.Name = "butExit";
             this.butExit.Size = new System.Drawing.Size(466, 65);
             this.butExit.TabIndex = 4;
@@ -91,7 +117,7 @@ namespace PBL3
             this.butLogin.BackColor = System.Drawing.SystemColors.Highlight;
             this.butLogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.butLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.butLogin.Location = new System.Drawing.Point(24, 385);
+            this.butLogin.Location = new System.Drawing.Point(24, 380);
             this.butLogin.Name = "butLogin";
             this.butLogin.Size = new System.Drawing.Size(466, 65);
             this.butLogin.TabIndex = 3;
@@ -175,9 +201,11 @@ namespace PBL3
             // 
             // Login
             // 
+            this.AcceptButton = this.butLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.butExit;
             this.ClientSize = new System.Drawing.Size(1114, 699);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picturebox);
@@ -195,7 +223,8 @@ namespace PBL3
 
         }
 
-        #endregion
+            #endregion      
+
 
         private System.Windows.Forms.PictureBox picturebox;
         private Panel panel1;
@@ -209,6 +238,8 @@ namespace PBL3
         private Button butExit;
         private Button butLogin;
         private TextBox txtPassword;
+        private Label label5;
+        private Button bntRegister;
     }
 }
 
