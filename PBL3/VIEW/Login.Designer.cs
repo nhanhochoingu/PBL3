@@ -38,10 +38,10 @@ namespace PBL3
             this.butExit = new System.Windows.Forms.Button();
             this.butLogin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -54,9 +54,9 @@ namespace PBL3
             // picturebox
             // 
             this.picturebox.Image = ((System.Drawing.Image)(resources.GetObject("picturebox.Image")));
-            this.picturebox.Location = new System.Drawing.Point(45, 37);
+            this.picturebox.Location = new System.Drawing.Point(-17, -12);
             this.picturebox.Name = "picturebox";
-            this.picturebox.Size = new System.Drawing.Size(507, 628);
+            this.picturebox.Size = new System.Drawing.Size(587, 712);
             this.picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox.TabIndex = 0;
             this.picturebox.TabStop = false;
@@ -101,20 +101,21 @@ namespace PBL3
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtPassword);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(3, 256);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(501, 106);
             this.panel3.TabIndex = 2;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(201, 24);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(286, 36);
-            this.textBox2.TabIndex = 1;
+            this.txtPassword.Location = new System.Drawing.Point(201, 24);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(286, 36);
+            this.txtPassword.TabIndex = 1;
             // 
             // label3
             // 
@@ -129,20 +130,20 @@ namespace PBL3
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtUsername);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(3, 148);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(501, 102);
             this.panel2.TabIndex = 1;
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(201, 24);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 35);
-            this.textBox1.TabIndex = 1;
+            this.txtUsername.Location = new System.Drawing.Point(201, 24);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(286, 35);
+            this.txtUsername.TabIndex = 1;
             // 
             // label2
             // 
@@ -176,6 +177,7 @@ namespace PBL3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 699);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picturebox);
@@ -203,10 +205,10 @@ namespace PBL3
         private Label label2;
         private ContextMenuStrip contextMenuStrip1;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtUsername;
         private Button butExit;
         private Button butLogin;
-        private TextBox textBox2;
+        private TextBox txtPassword;
     }
 }
 

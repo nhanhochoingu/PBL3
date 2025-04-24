@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3
 {
-    public partial class Management: Form
+    public partial class StaffForm: Form
     {
-        public Management()
+        public StaffForm()
         {
             InitializeComponent();
         }

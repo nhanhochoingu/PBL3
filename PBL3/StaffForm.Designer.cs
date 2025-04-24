@@ -1,6 +1,6 @@
 ﻿namespace PBL3
 {
-    partial class Management
+    partial class StaffForm
     {
         /// <summary>
         /// Required designer variable.
