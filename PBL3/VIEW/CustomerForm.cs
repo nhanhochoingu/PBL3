@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL3.DAL;
 
 namespace PBL3
 {
     public partial class CustomerForm : Form
     {
-        public CustomerForm()
+        private Account currentAccount;
+        public CustomerForm(Account acc)
         {
             InitializeComponent();
+            currentAccount = acc;
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)

@@ -18,7 +18,7 @@ namespace PBL3
             InitializeComponent();
         }
 
-        String cnn = @"Data Source=THITKHOMAMRUOC;Initial Catalog=FootballFieldManagement;Integrated Security=True";
+        String cnn = @"Data Source=TIẾN-NGUYỄN\SQLEXPRESS;Initial Catalog=FootballFieldManagement;Integrated Security=True";
 
         private void butExit_Click(object sender, EventArgs e)
         {
