@@ -13,10 +13,10 @@ namespace PBL3.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EF_QLSB : DbContext
+    public partial class PBL3_EF : DbContext
     {
-        public EF_QLSB()
-            : base("name=EF_QLSB")
+        public PBL3_EF()
+            : base("name=PBL3_EF")
         {
         }
     
@@ -29,10 +29,8 @@ namespace PBL3.DAL
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Bill> Bills { get; set; }
         public virtual DbSet<BillDetail> BillDetails { get; set; }
-        public virtual DbSet<Coupon> Coupons { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Drink> Drinks { get; set; }
-        public virtual DbSet<Inventory> Inventories { get; set; }
         public virtual DbSet<Pitch> Pitches { get; set; }
         public virtual DbSet<PitchSchedule> PitchSchedules { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }

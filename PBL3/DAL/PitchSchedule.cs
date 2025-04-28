@@ -18,6 +18,8 @@ namespace PBL3.DAL
         public Nullable<int> PitchID { get; set; }
         public Nullable<int> CustomerID { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.TimeSpan> StartTime { get; set; }
+        public Nullable<System.TimeSpan> EndTime { get; set; }
         public string Status { get; set; }
     
         public virtual Customer Customer { get; set; }

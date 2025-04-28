@@ -63,6 +63,36 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bookmark_97575_1920 {
+            get {
+                object obj = ResourceManager.GetObject("bookmark-97575_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bottledwater_4127009_1920 {
+            get {
+                object obj = ResourceManager.GetObject("bottledwater-4127009_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap f9b06eea4f4f576ca92fa2f35e6206f7 {
+            get {
+                object obj = ResourceManager.GetObject("f9b06eea4f4f576ca92fa2f35e6206f7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fbtitle {
             get {
                 object obj = ResourceManager.GetObject("fbtitle", resourceCulture);
@@ -113,10 +143,40 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_2426371_1280 {
+            get {
+                object obj = ResourceManager.GetObject("icon-2426371_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log_35496_1920 {
+            get {
+                object obj = ResourceManager.GetObject("log-35496_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lovepik_com_402682230_3d_three_dimensional_2025_new_years_day_calendar_model_elements {
             get {
                 object obj = ResourceManager.GetObject("Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elem" +
                         "ents", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap the_door_1389755_1920 {
+            get {
+                object obj = ResourceManager.GetObject("the-door-1389755_1920", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -18,7 +18,6 @@ namespace PBL3.DAL
         public Drink()
         {
             this.BillDetails = new HashSet<BillDetail>();
-            this.Inventories = new HashSet<Inventory>();
         }
     
         public int DrinkID { get; set; }
@@ -28,7 +27,5 @@ namespace PBL3.DAL
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BillDetail> BillDetails { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Inventory> Inventories { get; set; }
     }
 }

@@ -29,7 +29,6 @@ namespace PBL3.DAL
         public Nullable<decimal> Total { get; set; }
     
         public virtual Admin Admin { get; set; }
-        public virtual Coupon Coupon { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual Pitch Pitch { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

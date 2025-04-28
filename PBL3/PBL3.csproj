@@ -58,65 +58,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\_BLL.cs" />
     <Compile Include="DAL\Account.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Admin.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Bill.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\BillDetail.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BLL\_BLL.cs" />
-    <Compile Include="DAL\Coupon.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Customer.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\_DAL.cs" />
     <Compile Include="DAL\Drink.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Inventory.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+    <Compile Include="DAL\PBL3.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PBL3.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PBL3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PBL3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PBL3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PBL3.edmx</DependentUpon>
     </Compile>
     <Compile Include="DAL\Pitch.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\PitchSchedule.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\QLSB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\QLSB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\QLSB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSB.edmx</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Staff.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\StaffSchedule.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Statistic.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\sysdiagram.cs">
-      <DependentUpon>QLSB.tt</DependentUpon>
+      <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\_DAL.cs" />
     <Compile Include="VIEW\InfoPersonelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +174,13 @@
     <EmbeddedResource Include="VIEW\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="DAL\PBL3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PBL3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\PBL3.edmx.diagram">
+      <DependentUpon>PBL3.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -190,38 +191,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="DAL\QLSB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLSB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DAL\QLSB.edmx.diagram">
-      <DependentUpon>QLSB.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\QLSB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLSB.edmx</DependentUpon>
-      <LastGenOutput>QLSB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DAL\QLSB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLSB.edmx</DependentUpon>
-      <LastGenOutput>QLSB.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elements.png" />
     <None Include="Resources\football-goal-15445 %283%29.png" />
     <None Include="Resources\football-goal-15445 %282%29.png" />
     <None Include="Resources\football-goal-15445 %281%29.png" />
     <None Include="Resources\football-goal-15445.png" />
     <None Include="Resources\fbtitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\PBL3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PBL3.edmx</DependentUpon>
+      <LastGenOutput>PBL3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\PBL3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PBL3.edmx</DependentUpon>
+      <LastGenOutput>PBL3.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\the-door-1389755_1920.png" />
+    <None Include="Resources\log-35496_1920.png" />
+    <None Include="Resources\bookmark-97575_1920.png" />
+    <None Include="Resources\bottledwater-4127009_1920.png" />
+    <None Include="Resources\icon-2426371_1280.png" />
+    <None Include="Resources\f9b06eea4f4f576ca92fa2f35e6206f7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

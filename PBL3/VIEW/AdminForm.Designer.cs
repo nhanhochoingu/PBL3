@@ -33,9 +33,9 @@
             this.Title_panel = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.but_Booking = new System.Windows.Forms.Button();
             this.but_Menu = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Title_panel.SuspendLayout();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,16 +83,6 @@
             this.sidebar.Size = new System.Drawing.Size(60, 653);
             this.sidebar.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PBL3.Properties.Resources.Lovepik_com_402682230_3d_three_dimensional_2025_new_years_day_calendar_model_elements;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 59);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // but_Booking
             // 
             this.but_Booking.BackColor = System.Drawing.Color.DimGray;
@@ -118,6 +108,16 @@
             this.but_Menu.Text = "≡";
             this.but_Menu.UseVisualStyleBackColor = false;
             this.but_Menu.Click += new System.EventHandler(this.but_Menu_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PBL3.Properties.Resources.Lovepik_com_402682230_3d_three_dimensional_2025_new_years_day_calendar_model_elements;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // AdminForm
             // 

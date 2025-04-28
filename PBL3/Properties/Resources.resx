@@ -118,11 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="football-goal-15445 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\football-goal-15445 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="football-goal-15445" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\football-goal-15445.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bottledwater-4127009_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bottledwater-4127009_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-2426371_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-2426371_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f9b06eea4f4f576ca92fa2f35e6206f7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f9b06eea4f4f576ca92fa2f35e6206f7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="log-35496_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-35496_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elements" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elements.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bookmark-97575_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bookmark-97575_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="football-goal-15445 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\football-goal-15445 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="football-goal-15445 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\football-goal-15445 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,7 +151,7 @@
   <data name="fbtitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fbtitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elements" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elements.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="the-door-1389755_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\the-door-1389755_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

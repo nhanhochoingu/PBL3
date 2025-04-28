@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67e8048f54d9404fb62f0c9998ba0bd4" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="PBL3Model.Account" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.Admin" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.Bill" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.BillDetail" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.Customer" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.Drink" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.Pitch" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.PitchSchedule" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.Staff" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.StaffSchedule" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.Statistic" Width="1.5" PointX="7.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3Model.sysdiagram" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="PBL3Model.FK__Admin__UserID__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__Customer__UserID__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__Staff__UserID__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__Bill__AdminID__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__Bill__CustomerID__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__Bill__PitchID__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__BillDetai__BillI__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__BillDetai__Drink__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__PitchSche__Custo__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__PitchSche__Pitch__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3Model.FK__StaffSche__Staff__68487DD7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

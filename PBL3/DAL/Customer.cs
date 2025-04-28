@@ -18,7 +18,6 @@ namespace PBL3.DAL
         public Customer()
         {
             this.Bills = new HashSet<Bill>();
-            this.Coupons = new HashSet<Coupon>();
             this.PitchSchedules = new HashSet<PitchSchedule>();
         }
     
@@ -27,13 +26,10 @@ namespace PBL3.DAL
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
-        public int Point { get; set; }
     
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Coupon> Coupons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PitchSchedule> PitchSchedules { get; set; }
     }

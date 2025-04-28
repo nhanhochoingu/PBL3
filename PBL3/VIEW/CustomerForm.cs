@@ -19,13 +19,6 @@ namespace PBL3
             InitializeComponent();
             currentAccount = acc;
         }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            this.Close();
-        }
-
         private void CustomerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn muốn đăng xuất ?", "Thông báo đăng xuất", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
@@ -33,13 +26,35 @@ namespace PBL3
                 e.Cancel = true;
             }
         }
-
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        private bool sidebarExpanded = false; // Xác định trạng thái mở hay đóng
+        private void but_Menu_Click(object sender, EventArgs e)
         {
-            InfoPersonelForm infoPersonelForm = new InfoPersonelForm();
-            this.Hide();
-            infoPersonelForm.ShowDialog();
-            this.Show();
+            if (sidebarExpanded)
+            {
+                // Nếu đang mở thì thu nhỏ
+                sidebar.Width = 45;
+                but_Menu.Location = new Point(0, 0);
+                but_Booking.Text = "";
+                but_TaiKhoan.Text = "";
+                but_DieuKhoan.Text = "";
+                but_Thoat.Text = "";
+                sidebarExpanded = false;
+            }
+            else
+            {
+                // Nếu đang thu nhỏ thì mở rộng
+                sidebar.Width = 200;
+                but_Menu.Location = new Point(160, 0);
+                but_Booking.Width = 200;
+                but_Booking.Text = "Đặt Sân";
+                but_TaiKhoan.Width = 200;
+                but_TaiKhoan.Text = "Tài Khoản";
+                but_DieuKhoan.Width = 200;
+                but_DieuKhoan.Text = "Điều Khoản";
+                but_Thoat.Width = 200;
+                but_Thoat.Text = "Thoát";
+                sidebarExpanded = true;
+            }
         }
     }
 }

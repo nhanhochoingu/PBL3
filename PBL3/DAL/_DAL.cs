@@ -9,7 +9,7 @@ namespace PBL3.DAL
 {
     public class _DAL
     {
-        private EF_QLSB db = new EF_QLSB();
+        private PBL3_EF db = new PBL3_EF();
         public Account GetAccount(string username, string password)
         {
             return db.Accounts
