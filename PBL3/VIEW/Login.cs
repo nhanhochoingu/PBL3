@@ -62,6 +62,7 @@ namespace PBL3
             switch (account.Role.ToLower())
             {
                 case "admin":
+
                     AdminForm adminForm = new AdminForm();
                     adminForm.ShowDialog();
                     break;

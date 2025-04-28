@@ -172,6 +172,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="VIEW\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
@@ -215,6 +216,12 @@
       <DependentUpon>QLSB.edmx</DependentUpon>
       <LastGenOutput>QLSB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elements.png" />
+    <None Include="Resources\football-goal-15445 %283%29.png" />
+    <None Include="Resources\football-goal-15445 %282%29.png" />
+    <None Include="Resources\football-goal-15445 %281%29.png" />
+    <None Include="Resources\football-goal-15445.png" />
+    <None Include="Resources\fbtitle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
