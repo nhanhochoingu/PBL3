@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using PBL3.BLL;
+using PBL3.DAL;
 
 namespace PBL3.VIEW
 {
@@ -15,6 +18,90 @@ namespace PBL3.VIEW
         public UC_TaiKhoan()
         {
             InitializeComponent();
+        }
+        private _BLL bll = new _BLL();
+        private void UC_TaiKhoan_Load(object sender, EventArgs e)
+        {
+            int userId = UserSession.LoggedInUserID;
+            Customer customer = bll.GetCustomerInfo(userId);
+            if (customer != null)
+            {
+                txt_ID.Text = customer.CustomerID.ToString();
+                txt_Ten.Text = customer.Name;
+                txt_Sđt.Text = customer.PhoneNumber;
+                txt_Email.Text = customer.Email;
+
+                if (customer.Account != null)
+                {
+                    txt_username.Text = customer.Account.Username;
+                    txt_Password.Text = customer.Account.Password;
+                }
+            }
+
+        }
+
+        private void cb_Edit_CheckedChanged(object sender, EventArgs e)
+        {
+            bool isEditable = cb_Edit.Checked;
+
+            txt_Ten.ReadOnly = !isEditable;
+            txt_Sđt.ReadOnly = !isEditable;
+            txt_Email.ReadOnly = !isEditable;
+            txt_username.ReadOnly = !isEditable;
+            txt_Password.ReadOnly = !isEditable;
+
+            txt_Ten.BorderStyle = isEditable ? BorderStyle.FixedSingle : BorderStyle.None;
+            txt_Ten.BackColor = isEditable ? Color.White : this.BackColor;
+            txt_Sđt.BorderStyle = isEditable ? BorderStyle.FixedSingle : BorderStyle.None;
+            txt_Sđt.BackColor = isEditable ? Color.White : this.BackColor;
+            txt_Email.BorderStyle = isEditable ? BorderStyle.FixedSingle : BorderStyle.None;
+            txt_Email.BackColor = isEditable ? Color.White : this.BackColor;
+            txt_username.BorderStyle = isEditable ? BorderStyle.FixedSingle : BorderStyle.None;
+            txt_username.BackColor = isEditable ? Color.White : this.BackColor;
+            txt_Password.BorderStyle = isEditable ? BorderStyle.FixedSingle : BorderStyle.None;
+            txt_Password.BackColor = isEditable ? Color.White : this.BackColor;
+            txt_ID.BorderStyle = isEditable ? BorderStyle.FixedSingle : BorderStyle.None;
+            txt_ID.BackColor = isEditable ? Color.White : this.BackColor;
+
+            but_Save.Enabled = isEditable;
+
+        }
+
+        private void but_Save_Click(object sender, EventArgs e)
+        {
+            int userId = UserSession.LoggedInUserID;
+
+            string name = txt_Ten.Text.Trim();
+            string phone = txt_Sđt.Text.Trim();
+            string email = txt_Email.Text.Trim();
+            string username = txt_username.Text.Trim();
+            string password = txt_Password.Text.Trim();
+
+            bool result = bll.UpdateCustomerInfo(userId, name, phone, email, username, password);
+
+            if (result)
+            {
+                MessageBox.Show("Cập nhật thành công!");
+                cb_Edit.Checked = false;
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại!");
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_Show.Checked)
+            {
+                // Hiện mật khẩu
+                txt_Password.PasswordChar = '\0';
+            }
+            else
+            {
+                // Ẩn mật khẩu bằng dấu *
+                txt_Password.PasswordChar = '*';
+            }
         }
     }
 }

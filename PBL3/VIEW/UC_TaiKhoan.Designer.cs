@@ -29,28 +29,38 @@
         private void InitializeComponent()
         {
             this.grb_TaiKhoan = new System.Windows.Forms.GroupBox();
-            this.grb_LichSu = new System.Windows.Forms.GroupBox();
-            this.lb_ID = new System.Windows.Forms.Label();
-            this.lb_Sđt = new System.Windows.Forms.Label();
-            this.lb_Ten = new System.Windows.Forms.Label();
-            this.lb_Mail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.but_Save = new System.Windows.Forms.Button();
+            this.lb_Password = new System.Windows.Forms.Label();
+            this.lb_username = new System.Windows.Forms.Label();
             this.cb_Edit = new System.Windows.Forms.CheckBox();
+            this.but_Save = new System.Windows.Forms.Button();
+            this.txt_Sđt = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.txt_Ten = new System.Windows.Forms.TextBox();
+            this.txt_ID = new System.Windows.Forms.TextBox();
+            this.lb_Mail = new System.Windows.Forms.Label();
+            this.lb_Ten = new System.Windows.Forms.Label();
+            this.lb_Sđt = new System.Windows.Forms.Label();
+            this.lb_ID = new System.Windows.Forms.Label();
+            this.grb_LichSu = new System.Windows.Forms.GroupBox();
+            this.cb_Show = new System.Windows.Forms.CheckBox();
             this.grb_TaiKhoan.SuspendLayout();
             this.SuspendLayout();
             // 
             // grb_TaiKhoan
             // 
+            this.grb_TaiKhoan.Controls.Add(this.cb_Show);
+            this.grb_TaiKhoan.Controls.Add(this.lb_Password);
+            this.grb_TaiKhoan.Controls.Add(this.lb_username);
             this.grb_TaiKhoan.Controls.Add(this.cb_Edit);
             this.grb_TaiKhoan.Controls.Add(this.but_Save);
-            this.grb_TaiKhoan.Controls.Add(this.textBox2);
-            this.grb_TaiKhoan.Controls.Add(this.textBox4);
-            this.grb_TaiKhoan.Controls.Add(this.textBox3);
-            this.grb_TaiKhoan.Controls.Add(this.textBox1);
+            this.grb_TaiKhoan.Controls.Add(this.txt_Sđt);
+            this.grb_TaiKhoan.Controls.Add(this.txt_Email);
+            this.grb_TaiKhoan.Controls.Add(this.txt_Password);
+            this.grb_TaiKhoan.Controls.Add(this.txt_username);
+            this.grb_TaiKhoan.Controls.Add(this.txt_Ten);
+            this.grb_TaiKhoan.Controls.Add(this.txt_ID);
             this.grb_TaiKhoan.Controls.Add(this.lb_Mail);
             this.grb_TaiKhoan.Controls.Add(this.lb_Ten);
             this.grb_TaiKhoan.Controls.Add(this.lb_Sđt);
@@ -59,10 +69,148 @@
             this.grb_TaiKhoan.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.grb_TaiKhoan.Location = new System.Drawing.Point(3, 14);
             this.grb_TaiKhoan.Name = "grb_TaiKhoan";
-            this.grb_TaiKhoan.Size = new System.Drawing.Size(994, 196);
+            this.grb_TaiKhoan.Size = new System.Drawing.Size(980, 196);
             this.grb_TaiKhoan.TabIndex = 0;
             this.grb_TaiKhoan.TabStop = false;
             this.grb_TaiKhoan.Text = "TÀI KHOẢN";
+            // 
+            // lb_Password
+            // 
+            this.lb_Password.AutoSize = true;
+            this.lb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Password.Location = new System.Drawing.Point(293, 135);
+            this.lb_Password.Name = "lb_Password";
+            this.lb_Password.Size = new System.Drawing.Size(97, 20);
+            this.lb_Password.TabIndex = 7;
+            this.lb_Password.Text = "Password:";
+            // 
+            // lb_username
+            // 
+            this.lb_username.AutoSize = true;
+            this.lb_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_username.Location = new System.Drawing.Point(293, 95);
+            this.lb_username.Name = "lb_username";
+            this.lb_username.Size = new System.Drawing.Size(103, 20);
+            this.lb_username.TabIndex = 7;
+            this.lb_username.Text = "UserName:";
+            // 
+            // cb_Edit
+            // 
+            this.cb_Edit.AutoSize = true;
+            this.cb_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Edit.Location = new System.Drawing.Point(769, 42);
+            this.cb_Edit.Name = "cb_Edit";
+            this.cb_Edit.Size = new System.Drawing.Size(164, 22);
+            this.cb_Edit.TabIndex = 6;
+            this.cb_Edit.Text = "Thay đổi thông tin";
+            this.cb_Edit.UseVisualStyleBackColor = true;
+            this.cb_Edit.CheckedChanged += new System.EventHandler(this.cb_Edit_CheckedChanged);
+            // 
+            // but_Save
+            // 
+            this.but_Save.Location = new System.Drawing.Point(769, 77);
+            this.but_Save.Name = "but_Save";
+            this.but_Save.Size = new System.Drawing.Size(106, 38);
+            this.but_Save.TabIndex = 5;
+            this.but_Save.Text = "Lưu";
+            this.but_Save.UseVisualStyleBackColor = true;
+            this.but_Save.Click += new System.EventHandler(this.but_Save_Click);
+            // 
+            // txt_Sđt
+            // 
+            this.txt_Sđt.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.txt_Sđt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Sđt.Location = new System.Drawing.Point(63, 92);
+            this.txt_Sđt.Name = "txt_Sđt";
+            this.txt_Sđt.Size = new System.Drawing.Size(224, 23);
+            this.txt_Sđt.TabIndex = 4;
+            // 
+            // txt_Email
+            // 
+            this.txt_Email.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Email.Location = new System.Drawing.Point(424, 42);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(330, 23);
+            this.txt_Email.TabIndex = 4;
+            // 
+            // txt_Password
+            // 
+            this.txt_Password.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Password.Location = new System.Drawing.Point(424, 128);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
+            this.txt_Password.Size = new System.Drawing.Size(330, 23);
+            this.txt_Password.TabIndex = 4;
+            // 
+            // txt_username
+            // 
+            this.txt_username.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_username.Location = new System.Drawing.Point(424, 88);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(330, 23);
+            this.txt_username.TabIndex = 4;
+            // 
+            // txt_Ten
+            // 
+            this.txt_Ten.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.txt_Ten.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Ten.Location = new System.Drawing.Point(63, 135);
+            this.txt_Ten.Name = "txt_Ten";
+            this.txt_Ten.Size = new System.Drawing.Size(224, 23);
+            this.txt_Ten.TabIndex = 4;
+            // 
+            // txt_ID
+            // 
+            this.txt_ID.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.txt_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_ID.Location = new System.Drawing.Point(63, 43);
+            this.txt_ID.Name = "txt_ID";
+            this.txt_ID.ReadOnly = true;
+            this.txt_ID.Size = new System.Drawing.Size(224, 23);
+            this.txt_ID.TabIndex = 4;
+            // 
+            // lb_Mail
+            // 
+            this.lb_Mail.AutoSize = true;
+            this.lb_Mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Mail.Location = new System.Drawing.Point(293, 46);
+            this.lb_Mail.Name = "lb_Mail";
+            this.lb_Mail.Size = new System.Drawing.Size(62, 20);
+            this.lb_Mail.TabIndex = 3;
+            this.lb_Mail.Text = "Email:";
+            // 
+            // lb_Ten
+            // 
+            this.lb_Ten.AutoSize = true;
+            this.lb_Ten.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Ten.Location = new System.Drawing.Point(6, 135);
+            this.lb_Ten.Name = "lb_Ten";
+            this.lb_Ten.Size = new System.Drawing.Size(46, 20);
+            this.lb_Ten.TabIndex = 2;
+            this.lb_Ten.Text = "Tên:";
+            // 
+            // lb_Sđt
+            // 
+            this.lb_Sđt.AutoSize = true;
+            this.lb_Sđt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Sđt.Location = new System.Drawing.Point(6, 95);
+            this.lb_Sđt.Name = "lb_Sđt";
+            this.lb_Sđt.Size = new System.Drawing.Size(51, 20);
+            this.lb_Sđt.TabIndex = 1;
+            this.lb_Sđt.Text = "SĐT:";
+            // 
+            // lb_ID
+            // 
+            this.lb_ID.AutoSize = true;
+            this.lb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ID.Location = new System.Drawing.Point(6, 46);
+            this.lb_ID.Name = "lb_ID";
+            this.lb_ID.Size = new System.Drawing.Size(34, 20);
+            this.lb_ID.TabIndex = 0;
+            this.lb_ID.Text = "ID:";
             // 
             // grb_LichSu
             // 
@@ -70,93 +218,22 @@
             this.grb_LichSu.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.grb_LichSu.Location = new System.Drawing.Point(3, 217);
             this.grb_LichSu.Name = "grb_LichSu";
-            this.grb_LichSu.Size = new System.Drawing.Size(994, 480);
+            this.grb_LichSu.Size = new System.Drawing.Size(980, 480);
             this.grb_LichSu.TabIndex = 1;
             this.grb_LichSu.TabStop = false;
             this.grb_LichSu.Text = "LỊCH SỬ HOÁ ĐƠN";
             // 
-            // lb_ID
+            // cb_Show
             // 
-            this.lb_ID.AutoSize = true;
-            this.lb_ID.Location = new System.Drawing.Point(6, 40);
-            this.lb_ID.Name = "lb_ID";
-            this.lb_ID.Size = new System.Drawing.Size(40, 25);
-            this.lb_ID.TabIndex = 0;
-            this.lb_ID.Text = "ID:";
-            // 
-            // lb_Sđt
-            // 
-            this.lb_Sđt.AutoSize = true;
-            this.lb_Sđt.Location = new System.Drawing.Point(6, 136);
-            this.lb_Sđt.Name = "lb_Sđt";
-            this.lb_Sđt.Size = new System.Drawing.Size(63, 25);
-            this.lb_Sđt.TabIndex = 1;
-            this.lb_Sđt.Text = "SĐT:";
-            // 
-            // lb_Ten
-            // 
-            this.lb_Ten.AutoSize = true;
-            this.lb_Ten.Location = new System.Drawing.Point(379, 40);
-            this.lb_Ten.Name = "lb_Ten";
-            this.lb_Ten.Size = new System.Drawing.Size(57, 25);
-            this.lb_Ten.TabIndex = 2;
-            this.lb_Ten.Text = "Tên:";
-            // 
-            // lb_Mail
-            // 
-            this.lb_Mail.AutoSize = true;
-            this.lb_Mail.Location = new System.Drawing.Point(379, 136);
-            this.lb_Mail.Name = "lb_Mail";
-            this.lb_Mail.Size = new System.Drawing.Size(72, 25);
-            this.lb_Mail.TabIndex = 3;
-            this.lb_Mail.Text = "Email:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(75, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 30);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(75, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 30);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(461, 40);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(206, 30);
-            this.textBox3.TabIndex = 4;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(461, 136);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(206, 30);
-            this.textBox4.TabIndex = 4;
-            // 
-            // but_Save
-            // 
-            this.but_Save.Location = new System.Drawing.Point(769, 129);
-            this.but_Save.Name = "but_Save";
-            this.but_Save.Size = new System.Drawing.Size(106, 38);
-            this.but_Save.TabIndex = 5;
-            this.but_Save.Text = "Lưu";
-            this.but_Save.UseVisualStyleBackColor = true;
-            // 
-            // cb_Edit
-            // 
-            this.cb_Edit.AutoSize = true;
-            this.cb_Edit.Location = new System.Drawing.Point(769, 42);
-            this.cb_Edit.Name = "cb_Edit";
-            this.cb_Edit.Size = new System.Drawing.Size(207, 29);
-            this.cb_Edit.TabIndex = 6;
-            this.cb_Edit.Text = "Thay đổi thông tin";
-            this.cb_Edit.UseVisualStyleBackColor = true;
+            this.cb_Show.AutoSize = true;
+            this.cb_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Show.Location = new System.Drawing.Point(424, 164);
+            this.cb_Show.Name = "cb_Show";
+            this.cb_Show.Size = new System.Drawing.Size(109, 17);
+            this.cb_Show.TabIndex = 8;
+            this.cb_Show.Text = "Hiện mật khẩu";
+            this.cb_Show.UseVisualStyleBackColor = true;
+            this.cb_Show.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // UC_TaiKhoan
             // 
@@ -167,6 +244,7 @@
             this.Controls.Add(this.grb_TaiKhoan);
             this.Name = "UC_TaiKhoan";
             this.Size = new System.Drawing.Size(1000, 700);
+            this.Load += new System.EventHandler(this.UC_TaiKhoan_Load);
             this.grb_TaiKhoan.ResumeLayout(false);
             this.grb_TaiKhoan.PerformLayout();
             this.ResumeLayout(false);
@@ -182,10 +260,15 @@
         private System.Windows.Forms.Label lb_Sđt;
         private System.Windows.Forms.Label lb_ID;
         private System.Windows.Forms.Button but_Save;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Sđt;
+        private System.Windows.Forms.TextBox txt_Email;
+        private System.Windows.Forms.TextBox txt_Ten;
+        private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.CheckBox cb_Edit;
+        private System.Windows.Forms.Label lb_Password;
+        private System.Windows.Forms.Label lb_username;
+        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.TextBox txt_username;
+        private System.Windows.Forms.CheckBox cb_Show;
     }
 }

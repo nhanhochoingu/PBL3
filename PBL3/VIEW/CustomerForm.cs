@@ -18,6 +18,7 @@ namespace PBL3
         public CustomerForm(Account acc)
         {
             InitializeComponent();
+            LoadUserControl(new UC_Booking());
             currentAccount = acc;
         }
         private void CustomerForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -83,12 +84,26 @@ namespace PBL3
 
         private void but_TaiKhoan_Click(object sender, EventArgs e)
         {
-
+            sidebar.Width = 45;
+            but_Menu.Location = new Point(0, 0);
+            but_Booking.Text = "";
+            but_TaiKhoan.Text = "";
+            but_DieuKhoan.Text = "";
+            but_Thoat.Text = "";
+            sidebarExpanded = false;
+            LoadUserControl(new UC_TaiKhoan());
         }
 
         private void but_Booking_Click(object sender, EventArgs e)
         {
-
+            sidebar.Width = 45;
+            but_Menu.Location = new Point(0, 0);
+            but_Booking.Text = "";
+            but_TaiKhoan.Text = "";
+            but_DieuKhoan.Text = "";
+            but_Thoat.Text = "";
+            sidebarExpanded = false;
+            LoadUserControl(new UC_Booking());
         }
     }
 }

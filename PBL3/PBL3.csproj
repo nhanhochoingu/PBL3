@@ -111,6 +111,7 @@
       <DependentUpon>PBL3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\_DAL.cs" />
+    <Compile Include="UserSession.cs" />
     <Compile Include="VIEW\InfoPersonelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,11 +150,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VIEW\TermForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="VIEW\UC_Booking.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VIEW\TermForm.Designer.cs">
-      <DependentUpon>TermForm.cs</DependentUpon>
+    <Compile Include="VIEW\UC_Booking.Designer.cs">
+      <DependentUpon>UC_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC_TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC_TaiKhoan.Designer.cs">
+      <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="VIEW\UC_Terms.cs">
       <SubType>UserControl</SubType>
@@ -186,8 +193,11 @@
     <EmbeddedResource Include="VIEW\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\TermForm.resx">
-      <DependentUpon>TermForm.cs</DependentUpon>
+    <EmbeddedResource Include="VIEW\UC_Booking.resx">
+      <DependentUpon>UC_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC_TaiKhoan.resx">
+      <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\UC_Terms.resx">
       <DependentUpon>UC_Terms.cs</DependentUpon>

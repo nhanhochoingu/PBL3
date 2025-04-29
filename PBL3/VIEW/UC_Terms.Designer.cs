@@ -40,7 +40,7 @@
             this.txtTerms.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.txtTerms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTerms.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.txtTerms.Location = new System.Drawing.Point(2, 131);
+            this.txtTerms.Location = new System.Drawing.Point(78, 151);
             this.txtTerms.Multiline = true;
             this.txtTerms.Name = "txtTerms";
             this.txtTerms.Size = new System.Drawing.Size(849, 498);
@@ -50,7 +50,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PBL3.Properties.Resources.text_7070379_1920;
-            this.pictureBox1.Location = new System.Drawing.Point(248, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(338, 78);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(360, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -62,7 +62,7 @@
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Segoe UI Variable Text", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.Title.Location = new System.Drawing.Point(330, 9);
+            this.Title.Location = new System.Drawing.Point(421, 31);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(198, 44);
             this.Title.TabIndex = 3;
@@ -77,7 +77,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Title);
             this.Name = "UC_Terms";
-            this.Size = new System.Drawing.Size(853, 638);
+            this.Size = new System.Drawing.Size(1000, 700);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

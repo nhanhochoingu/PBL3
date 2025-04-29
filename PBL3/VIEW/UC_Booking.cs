@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PBL3.VIEW
 {
-    public partial class TermForm : Form
+    public partial class UC_Booking : UserControl
     {
-        public TermForm()
+        public UC_Booking()
         {
             InitializeComponent();
         }
-
     }
 }

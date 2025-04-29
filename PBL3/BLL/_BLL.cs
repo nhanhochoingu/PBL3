@@ -15,5 +15,13 @@ namespace PBL3.BLL
         {
             return dal.GetAccount(username, password);
         }
+        public Customer GetCustomerInfo(int userId)
+        {
+            return dal.GetCustomerByUserID(userId);
+        }
+        public bool UpdateCustomerInfo(int userId, string name, string phone, string email, string username, string password)
+        {
+            return dal.UpdateCustomerInfo(userId, name, phone, email, username, password);
+        }
     }
 }
