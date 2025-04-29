@@ -174,6 +174,16 @@ namespace PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap text_7070379_1920 {
+            get {
+                object obj = ResourceManager.GetObject("text-7070379_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap the_door_1389755_1920 {
             get {
                 object obj = ResourceManager.GetObject("the-door-1389755_1920", resourceCulture);

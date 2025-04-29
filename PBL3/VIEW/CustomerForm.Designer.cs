@@ -37,15 +37,17 @@ namespace PBL3
             this.but_Menu = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sidebar = new System.Windows.Forms.Panel();
-            this.but_Booking = new System.Windows.Forms.Button();
-            this.but_TaiKhoan = new System.Windows.Forms.Button();
-            this.but_DieuKhoan = new System.Windows.Forms.Button();
             this.but_Thoat = new System.Windows.Forms.Button();
+            this.but_DieuKhoan = new System.Windows.Forms.Button();
+            this.but_TaiKhoan = new System.Windows.Forms.Button();
+            this.but_Booking = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelMain = new System.Windows.Forms.Panel();
             this.Title_panel.SuspendLayout();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,10 +59,11 @@ namespace PBL3
             // 
             // Title_panel
             // 
+            this.Title_panel.Controls.Add(this.panel1);
             this.Title_panel.Controls.Add(this.Title);
             this.Title_panel.Location = new System.Drawing.Point(0, 0);
             this.Title_panel.Name = "Title_panel";
-            this.Title_panel.Size = new System.Drawing.Size(982, 60);
+            this.Title_panel.Size = new System.Drawing.Size(1332, 60);
             this.Title_panel.TabIndex = 4;
             // 
             // Title
@@ -68,11 +71,11 @@ namespace PBL3
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Title.Location = new System.Drawing.Point(291, 2);
+            this.Title.Location = new System.Drawing.Point(515, 4);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(424, 53);
+            this.Title.Size = new System.Drawing.Size(375, 53);
             this.Title.TabIndex = 0;
-            this.Title.Text = "Managerment System";
+            this.Title.Text = "Santiago Bernabéu";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // but_Menu
@@ -95,7 +98,7 @@ namespace PBL3
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(962, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1332, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -114,8 +117,45 @@ namespace PBL3
             this.sidebar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.sidebar.Location = new System.Drawing.Point(0, 60);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(60, 485);
+            this.sidebar.Size = new System.Drawing.Size(60, 795);
             this.sidebar.TabIndex = 2;
+            // 
+            // but_Thoat
+            // 
+            this.but_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_Thoat.Location = new System.Drawing.Point(0, 236);
+            this.but_Thoat.Name = "but_Thoat";
+            this.but_Thoat.Size = new System.Drawing.Size(60, 60);
+            this.but_Thoat.TabIndex = 9;
+            this.but_Thoat.Text = "Thoát";
+            this.but_Thoat.UseVisualStyleBackColor = true;
+            this.but_Thoat.Click += new System.EventHandler(this.but_Thoat_Click);
+            // 
+            // but_DieuKhoan
+            // 
+            this.but_DieuKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_DieuKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_DieuKhoan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.but_DieuKhoan.Location = new System.Drawing.Point(0, 176);
+            this.but_DieuKhoan.Name = "but_DieuKhoan";
+            this.but_DieuKhoan.Size = new System.Drawing.Size(60, 60);
+            this.but_DieuKhoan.TabIndex = 7;
+            this.but_DieuKhoan.Text = "Điều Khoản";
+            this.but_DieuKhoan.UseVisualStyleBackColor = true;
+            this.but_DieuKhoan.Click += new System.EventHandler(this.but_DieuKhoan_Click);
+            // 
+            // but_TaiKhoan
+            // 
+            this.but_TaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_TaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_TaiKhoan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.but_TaiKhoan.Location = new System.Drawing.Point(0, 116);
+            this.but_TaiKhoan.Name = "but_TaiKhoan";
+            this.but_TaiKhoan.Size = new System.Drawing.Size(60, 60);
+            this.but_TaiKhoan.TabIndex = 6;
+            this.but_TaiKhoan.Text = "Tài Khoản";
+            this.but_TaiKhoan.UseVisualStyleBackColor = true;
+            this.but_TaiKhoan.Click += new System.EventHandler(this.but_TaiKhoan_Click);
             // 
             // but_Booking
             // 
@@ -129,40 +169,7 @@ namespace PBL3
             this.but_Booking.TabIndex = 4;
             this.but_Booking.Text = "Đặt Sân";
             this.but_Booking.UseVisualStyleBackColor = false;
-            // 
-            // but_TaiKhoan
-            // 
-            this.but_TaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_TaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_TaiKhoan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.but_TaiKhoan.Location = new System.Drawing.Point(0, 116);
-            this.but_TaiKhoan.Name = "but_TaiKhoan";
-            this.but_TaiKhoan.Size = new System.Drawing.Size(60, 60);
-            this.but_TaiKhoan.TabIndex = 6;
-            this.but_TaiKhoan.Text = "Tài Khoản";
-            this.but_TaiKhoan.UseVisualStyleBackColor = true;
-            // 
-            // but_DieuKhoan
-            // 
-            this.but_DieuKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_DieuKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_DieuKhoan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.but_DieuKhoan.Location = new System.Drawing.Point(0, 176);
-            this.but_DieuKhoan.Name = "but_DieuKhoan";
-            this.but_DieuKhoan.Size = new System.Drawing.Size(60, 60);
-            this.but_DieuKhoan.TabIndex = 7;
-            this.but_DieuKhoan.Text = "Điều Khoản";
-            this.but_DieuKhoan.UseVisualStyleBackColor = true;
-            // 
-            // but_Thoat
-            // 
-            this.but_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_Thoat.Location = new System.Drawing.Point(0, 236);
-            this.but_Thoat.Name = "but_Thoat";
-            this.but_Thoat.Size = new System.Drawing.Size(60, 60);
-            this.but_Thoat.TabIndex = 9;
-            this.but_Thoat.Text = "Thoát";
-            this.but_Thoat.UseVisualStyleBackColor = true;
+            this.but_Booking.Click += new System.EventHandler(this.but_Booking_Click);
             // 
             // pictureBox2
             // 
@@ -215,12 +222,27 @@ namespace PBL3
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(64, 60);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(898, 485);
+            this.panel1.TabIndex = 6;
+            // 
+            // PanelMain
+            // 
+            this.PanelMain.Location = new System.Drawing.Point(271, 63);
+            this.PanelMain.Name = "PanelMain";
+            this.PanelMain.Size = new System.Drawing.Size(890, 792);
+            this.PanelMain.TabIndex = 6;
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(962, 545);
+            this.ClientSize = new System.Drawing.Size(1332, 853);
+            this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Title_panel);
             this.Controls.Add(this.sidebar);
@@ -259,5 +281,7 @@ namespace PBL3
         private PictureBox pictureBox4;
         private Button but_Thoat;
         private PictureBox pictureBox5;
+        private Panel panel1;
+        private Panel PanelMain;
     }
 }

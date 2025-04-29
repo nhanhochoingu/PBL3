@@ -117,44 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="football-goal-15445 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\football-goal-15445 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="the-door-1389755_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\the-door-1389755_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-2426371_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-2426371_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="f9b06eea4f4f576ca92fa2f35e6206f7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\f9b06eea4f4f576ca92fa2f35e6206f7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="log-35496_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-35496_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bookmark-97575_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bookmark-97575_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elements" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lovepik_com-402682230-3d-three-dimensional-2025-new-years-day-calendar-model-elements.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="football-goal-15445" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\football-goal-15445.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bottledwater-4127009_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bottledwater-4127009_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="football-goal-15445 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\football-goal-15445 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="football-goal-15445 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\football-goal-15445 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fbtitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fbtitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text-7070379_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\text-7070379_1920.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="txtTerms.Text" xml:space="preserve">
+    <value>1,Thời gian sử dụng:
+Người thuê sân phải đến đúng giờ và sử dụng sân đúng khung giờ đã đặt. Nếu đến trễ, thời gian trễ sẽ bị trừ vào thời gian thuê sân.
+
+2,Hủy đặt sân:
+Việc hủy đặt sân phải được thông báo trước ít nhất 3 giờ. Nếu không, khách hàng sẽ bị tính phí 50% tiền sân đã đặt.
+
+3,Bảo vệ tài sản:
+Người sử dụng có trách nhiệm bảo quản tài sản và thiết bị trong sân. Mọi hành vi cố ý gây hư hỏng sẽ phải bồi thường.
+
+4,Trang phục thi đấu:
+Người chơi phải mặc trang phục thể thao phù hợp và sử dụng giày không đinh để đảm bảo an toàn cho người chơi và mặt sân.
+
+5,An ninh và trật tự:
+Nghiêm cấm các hành vi gây mất trật tự, đánh nhau, hoặc mang chất cấm vào khu vực sân bóng.
+
+6,Miễn trừ trách nhiệm:
+Sân bóng không chịu trách nhiệm về các tai nạn cá nhân xảy ra trong quá trình thi đấu nếu không phải lỗi từ phía sân.</value>
   </data>
 </root>
