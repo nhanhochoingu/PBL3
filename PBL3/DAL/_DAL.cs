@@ -43,6 +43,10 @@ namespace PBL3.DAL
             db.SaveChanges();
             return true;
         }
+        public List<Pitch> GetAll()
+        {
+            return db.Pitches.ToList();
+        }
 
     }
 }

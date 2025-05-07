@@ -33,20 +33,20 @@
             this.but_YourPitch = new System.Windows.Forms.Button();
             this.but_SeeAllPitch = new System.Windows.Forms.Button();
             this.but_Book = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_Minutes = new System.Windows.Forms.ComboBox();
+            this.cb_StartTime = new System.Windows.Forms.ComboBox();
+            this.cb_PitchType = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -55,9 +55,9 @@
             this.groupBox1.Controls.Add(this.but_YourPitch);
             this.groupBox1.Controls.Add(this.but_SeeAllPitch);
             this.groupBox1.Controls.Add(this.but_Book);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cb_Minutes);
+            this.groupBox1.Controls.Add(this.cb_StartTime);
+            this.groupBox1.Controls.Add(this.cb_PitchType);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -101,6 +101,7 @@
             this.but_SeeAllPitch.TabIndex = 3;
             this.but_SeeAllPitch.Text = "Xem Tất Cả Sân";
             this.but_SeeAllPitch.UseVisualStyleBackColor = true;
+            this.but_SeeAllPitch.Click += new System.EventHandler(this.but_SeeAllPitch_Click);
             // 
             // but_Book
             // 
@@ -111,26 +112,27 @@
             this.but_Book.TabIndex = 3;
             this.but_Book.Text = "Đặt Sân";
             this.but_Book.UseVisualStyleBackColor = true;
+            this.but_Book.Click += new System.EventHandler(this.but_Book_Click);
             // 
-            // comboBox3
+            // cb_Minutes
             // 
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cb_Minutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Minutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Minutes.FormattingEnabled = true;
+            this.cb_Minutes.Items.AddRange(new object[] {
             "60",
             "90"});
-            this.comboBox3.Location = new System.Drawing.Point(400, 89);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(145, 24);
-            this.comboBox3.TabIndex = 2;
+            this.cb_Minutes.Location = new System.Drawing.Point(400, 89);
+            this.cb_Minutes.Name = "cb_Minutes";
+            this.cb_Minutes.Size = new System.Drawing.Size(145, 24);
+            this.cb_Minutes.TabIndex = 2;
             // 
-            // comboBox2
+            // cb_StartTime
             // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cb_StartTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_StartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_StartTime.FormattingEnabled = true;
+            this.cb_StartTime.Items.AddRange(new object[] {
             "5:30",
             "6:30",
             "7:30",
@@ -146,24 +148,24 @@
             "20:30",
             "21:30",
             "22:30"});
-            this.comboBox2.Location = new System.Drawing.Point(117, 89);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(145, 24);
-            this.comboBox2.TabIndex = 2;
+            this.cb_StartTime.Location = new System.Drawing.Point(117, 89);
+            this.cb_StartTime.Name = "cb_StartTime";
+            this.cb_StartTime.Size = new System.Drawing.Size(145, 24);
+            this.cb_StartTime.TabIndex = 2;
             // 
-            // comboBox1
+            // cb_PitchType
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_PitchType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_PitchType.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_PitchType.FormattingEnabled = true;
+            this.cb_PitchType.Items.AddRange(new object[] {
             "5",
             "7",
             "11"});
-            this.comboBox1.Location = new System.Drawing.Point(117, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cb_PitchType.Location = new System.Drawing.Point(117, 36);
+            this.cb_PitchType.Name = "cb_PitchType";
+            this.cb_PitchType.Size = new System.Drawing.Size(145, 24);
+            this.cb_PitchType.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
@@ -216,7 +218,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgv);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.groupBox2.Location = new System.Drawing.Point(3, 209);
@@ -226,15 +228,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "THÔNG TIN SÂN BÓNG";
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 29);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(978, 441);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(6, 29);
+            this.dgv.Name = "dgv";
+            this.dgv.RowHeadersWidth = 51;
+            this.dgv.RowTemplate.Height = 24;
+            this.dgv.Size = new System.Drawing.Size(978, 441);
+            this.dgv.TabIndex = 0;
             // 
             // UC_Booking
             // 
@@ -248,7 +250,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,9 +262,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_Minutes;
+        private System.Windows.Forms.ComboBox cb_StartTime;
+        private System.Windows.Forms.ComboBox cb_PitchType;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
@@ -270,6 +272,6 @@
         private System.Windows.Forms.Button but_SeePrice;
         private System.Windows.Forms.Button but_SeeAllPitch;
         private System.Windows.Forms.Button but_YourPitch;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }

@@ -26,8 +26,6 @@ namespace PBL3.DAL
         public string PitchType { get; set; }
         public string PitchStatus { get; set; }
         public Nullable<decimal> PitchPrice { get; set; }
-        public Nullable<System.TimeSpan> StartTime { get; set; }
-        public Nullable<System.TimeSpan> EndTime { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }

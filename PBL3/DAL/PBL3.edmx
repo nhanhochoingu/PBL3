@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PBL3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PBL3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="UserID" />
@@ -75,8 +75,6 @@
           <Property Name="PitchType" Type="nvarchar" MaxLength="50" />
           <Property Name="PitchStatus" Type="nvarchar" MaxLength="50" />
           <Property Name="PitchPrice" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="StartTime" Type="time" Precision="7" />
-          <Property Name="EndTime" Type="time" Precision="7" />
         </EntityType>
         <EntityType Name="PitchSchedule">
           <Key>
@@ -320,8 +318,7 @@
             <End Role="StaffSchedule" EntitySet="StaffSchedule" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PBL3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -363,8 +360,8 @@
           <Property Name="Total" Type="Decimal" Precision="10" Scale="2" />
           <NavigationProperty Name="Admin" Relationship="Self.FK__Bill__AdminID__5FB337D6" FromRole="Bill" ToRole="Admin" />
           <NavigationProperty Name="Customer" Relationship="Self.FK__Bill__CustomerID__60A75C0F" FromRole="Bill" ToRole="Customer" />
-          <NavigationProperty Name="Pitch" Relationship="Self.FK__Bill__PitchID__619B8048" FromRole="Bill" ToRole="Pitch" />
           <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__BillI__628FA481" FromRole="Bill" ToRole="BillDetail" />
+          <NavigationProperty Name="Pitch" Relationship="PBL3Model.FK__Bill__PitchID__619B8048" FromRole="Bill" ToRole="Pitch" />
         </EntityType>
         <EntityType Name="BillDetail">
           <Key>
@@ -401,20 +398,6 @@
           <Property Name="Quantity" Type="Int32" />
           <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__Drink__6383C8BA" FromRole="Drink" ToRole="BillDetail" />
         </EntityType>
-        <EntityType Name="Pitch">
-          <Key>
-            <PropertyRef Name="PitchID" />
-          </Key>
-          <Property Name="PitchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PitchName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="PitchType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PitchStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PitchPrice" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="StartTime" Type="Time" Precision="7" />
-          <Property Name="EndTime" Type="Time" Precision="7" />
-          <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__PitchID__619B8048" FromRole="Pitch" ToRole="Bill" />
-          <NavigationProperty Name="PitchSchedules" Relationship="Self.FK__PitchSche__Pitch__66603565" FromRole="Pitch" ToRole="PitchSchedule" />
-        </EntityType>
         <EntityType Name="PitchSchedule">
           <Key>
             <PropertyRef Name="ScheduleID" />
@@ -427,7 +410,7 @@
           <Property Name="EndTime" Type="Time" Precision="7" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Customer" Relationship="Self.FK__PitchSche__Custo__656C112C" FromRole="PitchSchedule" ToRole="Customer" />
-          <NavigationProperty Name="Pitch" Relationship="Self.FK__PitchSche__Pitch__66603565" FromRole="PitchSchedule" ToRole="Pitch" />
+          <NavigationProperty Name="Pitch" Relationship="PBL3Model.FK__PitchSche__Pitch__66603565" FromRole="PitchSchedule" ToRole="Pitch" />
         </EntityType>
         <EntityType Name="Staff">
           <Key>
@@ -532,18 +515,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__PitchID__619B8048">
-          <End Role="Pitch" Type="Self.Pitch" Multiplicity="0..1" />
-          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pitch">
-              <PropertyRef Name="PitchID" />
-            </Principal>
-            <Dependent Role="Bill">
-              <PropertyRef Name="PitchID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__BillDetai__BillI__628FA481">
           <End Role="Bill" Type="Self.Bill" Multiplicity="0..1" />
           <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
@@ -580,18 +551,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PitchSche__Pitch__66603565">
-          <End Role="Pitch" Type="Self.Pitch" Multiplicity="0..1" />
-          <End Role="PitchSchedule" Type="Self.PitchSchedule" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pitch">
-              <PropertyRef Name="PitchID" />
-            </Principal>
-            <Dependent Role="PitchSchedule">
-              <PropertyRef Name="PitchID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__StaffSche__Staff__68487DD7">
           <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
           <End Role="StaffSchedule" Type="Self.StaffSchedule" Multiplicity="*" />
@@ -611,7 +570,6 @@
           <EntitySet Name="BillDetails" EntityType="Self.BillDetail" />
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="Drinks" EntityType="Self.Drink" />
-          <EntitySet Name="Pitches" EntityType="Self.Pitch" />
           <EntitySet Name="PitchSchedules" EntityType="Self.PitchSchedule" />
           <EntitySet Name="Staffs" EntityType="Self.Staff" />
           <EntitySet Name="StaffSchedules" EntityType="Self.StaffSchedule" />
@@ -637,10 +595,6 @@
             <End Role="Customer" EntitySet="Customers" />
             <End Role="Bill" EntitySet="Bills" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__PitchID__619B8048" Association="Self.FK__Bill__PitchID__619B8048">
-            <End Role="Pitch" EntitySet="Pitches" />
-            <End Role="Bill" EntitySet="Bills" />
-          </AssociationSet>
           <AssociationSet Name="FK__BillDetai__BillI__628FA481" Association="Self.FK__BillDetai__BillI__628FA481">
             <End Role="Bill" EntitySet="Bills" />
             <End Role="BillDetail" EntitySet="BillDetails" />
@@ -653,15 +607,56 @@
             <End Role="Customer" EntitySet="Customers" />
             <End Role="PitchSchedule" EntitySet="PitchSchedules" />
           </AssociationSet>
-          <AssociationSet Name="FK__PitchSche__Pitch__66603565" Association="Self.FK__PitchSche__Pitch__66603565">
-            <End Role="Pitch" EntitySet="Pitches" />
-            <End Role="PitchSchedule" EntitySet="PitchSchedules" />
-          </AssociationSet>
           <AssociationSet Name="FK__StaffSche__Staff__68487DD7" Association="Self.FK__StaffSche__Staff__68487DD7">
             <End Role="Staff" EntitySet="Staffs" />
             <End Role="StaffSchedule" EntitySet="StaffSchedules" />
           </AssociationSet>
+          <EntitySet Name="Pitches" EntityType="PBL3Model.Pitch" />
+          <AssociationSet Name="FK__Bill__PitchID__619B8048" Association="PBL3Model.FK__Bill__PitchID__619B8048">
+            <End Role="Pitch" EntitySet="Pitches" />
+            <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PitchSche__Pitch__66603565" Association="PBL3Model.FK__PitchSche__Pitch__66603565">
+            <End Role="Pitch" EntitySet="Pitches" />
+            <End Role="PitchSchedule" EntitySet="PitchSchedules" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Pitch">
+          <Key>
+            <PropertyRef Name="PitchID" />
+          </Key>
+          <Property Name="PitchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PitchName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PitchType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PitchStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PitchPrice" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="Bills" Relationship="PBL3Model.FK__Bill__PitchID__619B8048" FromRole="Pitch" ToRole="Bill" />
+          <NavigationProperty Name="PitchSchedules" Relationship="PBL3Model.FK__PitchSche__Pitch__66603565" FromRole="Pitch" ToRole="PitchSchedule" />
+        </EntityType>
+        <Association Name="FK__Bill__PitchID__619B8048">
+          <End Type="PBL3Model.Pitch" Role="Pitch" Multiplicity="0..1" />
+          <End Type="PBL3Model.Bill" Role="Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pitch">
+              <PropertyRef Name="PitchID" />
+            </Principal>
+            <Dependent Role="Bill">
+              <PropertyRef Name="PitchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PitchSche__Pitch__66603565">
+          <End Type="PBL3Model.Pitch" Role="Pitch" Multiplicity="0..1" />
+          <End Type="PBL3Model.PitchSchedule" Role="PitchSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pitch">
+              <PropertyRef Name="PitchID" />
+            </Principal>
+            <Dependent Role="PitchSchedule">
+              <PropertyRef Name="PitchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -735,19 +730,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Pitches">
-            <EntityTypeMapping TypeName="PBL3Model.Pitch">
-              <MappingFragment StoreEntitySet="Pitch">
-                <ScalarProperty Name="PitchID" ColumnName="PitchID" />
-                <ScalarProperty Name="PitchName" ColumnName="PitchName" />
-                <ScalarProperty Name="PitchType" ColumnName="PitchType" />
-                <ScalarProperty Name="PitchStatus" ColumnName="PitchStatus" />
-                <ScalarProperty Name="PitchPrice" ColumnName="PitchPrice" />
-                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
-                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PitchSchedules">
             <EntityTypeMapping TypeName="PBL3Model.PitchSchedule">
               <MappingFragment StoreEntitySet="PitchSchedule">
@@ -802,6 +784,17 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pitches">
+            <EntityTypeMapping TypeName="PBL3Model.Pitch">
+              <MappingFragment StoreEntitySet="Pitch">
+                <ScalarProperty Name="PitchPrice" ColumnName="PitchPrice" />
+                <ScalarProperty Name="PitchStatus" ColumnName="PitchStatus" />
+                <ScalarProperty Name="PitchType" ColumnName="PitchType" />
+                <ScalarProperty Name="PitchName" ColumnName="PitchName" />
+                <ScalarProperty Name="PitchID" ColumnName="PitchID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -23,5 +23,16 @@ namespace PBL3.BLL
         {
             return dal.UpdateCustomerInfo(userId, name, phone, email, username, password);
         }
+        public List<object> GetAllPitch()
+        {
+            return dal.GetAll()
+            .Select(s => new {
+            s.PitchID,
+            s.PitchName,
+            s.PitchType,
+            s.PitchStatus,
+            s.PitchPrice,
+            }).ToList<object>();
+        }
     }
 }

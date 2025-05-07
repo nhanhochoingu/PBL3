@@ -11,7 +11,6 @@
         <EntityTypeShape EntityType="PBL3Model.BillDetail" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.Customer" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.Drink" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3Model.Pitch" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.PitchSchedule" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.Staff" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3Model.StaffSchedule" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
@@ -22,12 +21,13 @@
         <AssociationConnector Association="PBL3Model.FK__Staff__UserID__6754599E" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK__Bill__AdminID__5FB337D6" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK__Bill__CustomerID__60A75C0F" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3Model.FK__Bill__PitchID__619B8048" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK__BillDetai__BillI__628FA481" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK__BillDetai__Drink__6383C8BA" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK__PitchSche__Custo__656C112C" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3Model.FK__PitchSche__Pitch__66603565" ManuallyRouted="false" />
         <AssociationConnector Association="PBL3Model.FK__StaffSche__Staff__68487DD7" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PBL3Model.Pitch" Width="1.5" PointX="10.375" PointY="5" />
+        <AssociationConnector Association="PBL3Model.FK__Bill__PitchID__619B8048" />
+        <AssociationConnector Association="PBL3Model.FK__PitchSche__Pitch__66603565" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
