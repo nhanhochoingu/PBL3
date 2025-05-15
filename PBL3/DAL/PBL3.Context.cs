@@ -27,15 +27,14 @@ namespace PBL3.DAL
     
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
-        public virtual DbSet<Bill> Bills { get; set; }
         public virtual DbSet<BillDetail> BillDetails { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Drink> Drinks { get; set; }
         public virtual DbSet<PitchSchedule> PitchSchedules { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
-        public virtual DbSet<StaffSchedule> StaffSchedules { get; set; }
-        public virtual DbSet<Statistic> Statistics { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Pitch> Pitches { get; set; }
+        public virtual DbSet<Drink> Drinks { get; set; }
+        public virtual DbSet<Bill> Bills { get; set; }
+        public virtual DbSet<Statistic> Statistics { get; set; }
     }
 }

@@ -21,9 +21,8 @@ namespace PBL3.DAL
         }
     
         public int DrinkID { get; set; }
-        public string DrinkType { get; set; }
+        public string DrinkName { get; set; }
         public Nullable<decimal> DrinkPrice { get; set; }
-        public Nullable<int> Quantity { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BillDetail> BillDetails { get; set; }

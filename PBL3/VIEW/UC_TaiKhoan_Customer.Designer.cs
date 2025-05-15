@@ -1,6 +1,6 @@
 ﻿namespace PBL3.VIEW
 {
-    partial class UC_TaiKhoan
+    partial class UC_TaiKhoan_Customer
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.grb_TaiKhoan = new System.Windows.Forms.GroupBox();
+            this.cb_Show = new System.Windows.Forms.CheckBox();
             this.lb_Password = new System.Windows.Forms.Label();
             this.lb_username = new System.Windows.Forms.Label();
             this.cb_Edit = new System.Windows.Forms.CheckBox();
+            this.but_view_invoice = new System.Windows.Forms.Button();
             this.but_Save = new System.Windows.Forms.Button();
             this.txt_Sđt = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
@@ -44,8 +46,10 @@
             this.lb_Sđt = new System.Windows.Forms.Label();
             this.lb_ID = new System.Windows.Forms.Label();
             this.grb_LichSu = new System.Windows.Forms.GroupBox();
-            this.cb_Show = new System.Windows.Forms.CheckBox();
+            this.dgvBills = new System.Windows.Forms.DataGridView();
             this.grb_TaiKhoan.SuspendLayout();
+            this.grb_LichSu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBills)).BeginInit();
             this.SuspendLayout();
             // 
             // grb_TaiKhoan
@@ -54,6 +58,7 @@
             this.grb_TaiKhoan.Controls.Add(this.lb_Password);
             this.grb_TaiKhoan.Controls.Add(this.lb_username);
             this.grb_TaiKhoan.Controls.Add(this.cb_Edit);
+            this.grb_TaiKhoan.Controls.Add(this.but_view_invoice);
             this.grb_TaiKhoan.Controls.Add(this.but_Save);
             this.grb_TaiKhoan.Controls.Add(this.txt_Sđt);
             this.grb_TaiKhoan.Controls.Add(this.txt_Email);
@@ -65,7 +70,7 @@
             this.grb_TaiKhoan.Controls.Add(this.lb_Ten);
             this.grb_TaiKhoan.Controls.Add(this.lb_Sđt);
             this.grb_TaiKhoan.Controls.Add(this.lb_ID);
-            this.grb_TaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grb_TaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_TaiKhoan.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.grb_TaiKhoan.Location = new System.Drawing.Point(3, 14);
             this.grb_TaiKhoan.Name = "grb_TaiKhoan";
@@ -73,6 +78,18 @@
             this.grb_TaiKhoan.TabIndex = 0;
             this.grb_TaiKhoan.TabStop = false;
             this.grb_TaiKhoan.Text = "TÀI KHOẢN";
+            // 
+            // cb_Show
+            // 
+            this.cb_Show.AutoSize = true;
+            this.cb_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Show.Location = new System.Drawing.Point(424, 164);
+            this.cb_Show.Name = "cb_Show";
+            this.cb_Show.Size = new System.Drawing.Size(109, 17);
+            this.cb_Show.TabIndex = 8;
+            this.cb_Show.Text = "Hiện mật khẩu";
+            this.cb_Show.UseVisualStyleBackColor = true;
+            this.cb_Show.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // lb_Password
             // 
@@ -106,11 +123,22 @@
             this.cb_Edit.UseVisualStyleBackColor = true;
             this.cb_Edit.CheckedChanged += new System.EventHandler(this.cb_Edit_CheckedChanged);
             // 
+            // but_view_invoice
+            // 
+            this.but_view_invoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_view_invoice.Location = new System.Drawing.Point(769, 128);
+            this.but_view_invoice.Name = "but_view_invoice";
+            this.but_view_invoice.Size = new System.Drawing.Size(144, 38);
+            this.but_view_invoice.TabIndex = 5;
+            this.but_view_invoice.Text = "Xem Hoá Đơn";
+            this.but_view_invoice.UseVisualStyleBackColor = true;
+            this.but_view_invoice.Click += new System.EventHandler(this.but_view_invoice_Click);
+            // 
             // but_Save
             // 
             this.but_Save.Location = new System.Drawing.Point(769, 77);
             this.but_Save.Name = "but_Save";
-            this.but_Save.Size = new System.Drawing.Size(106, 38);
+            this.but_Save.Size = new System.Drawing.Size(144, 38);
             this.but_Save.TabIndex = 5;
             this.but_Save.Text = "Lưu";
             this.but_Save.UseVisualStyleBackColor = true;
@@ -122,7 +150,7 @@
             this.txt_Sđt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Sđt.Location = new System.Drawing.Point(63, 92);
             this.txt_Sđt.Name = "txt_Sđt";
-            this.txt_Sđt.Size = new System.Drawing.Size(224, 23);
+            this.txt_Sđt.Size = new System.Drawing.Size(224, 27);
             this.txt_Sđt.TabIndex = 4;
             // 
             // txt_Email
@@ -131,7 +159,7 @@
             this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Email.Location = new System.Drawing.Point(424, 42);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(330, 23);
+            this.txt_Email.Size = new System.Drawing.Size(330, 27);
             this.txt_Email.TabIndex = 4;
             // 
             // txt_Password
@@ -141,7 +169,7 @@
             this.txt_Password.Location = new System.Drawing.Point(424, 128);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
-            this.txt_Password.Size = new System.Drawing.Size(330, 23);
+            this.txt_Password.Size = new System.Drawing.Size(330, 27);
             this.txt_Password.TabIndex = 4;
             // 
             // txt_username
@@ -150,7 +178,7 @@
             this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_username.Location = new System.Drawing.Point(424, 88);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(330, 23);
+            this.txt_username.Size = new System.Drawing.Size(330, 27);
             this.txt_username.TabIndex = 4;
             // 
             // txt_Ten
@@ -159,7 +187,7 @@
             this.txt_Ten.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Ten.Location = new System.Drawing.Point(63, 135);
             this.txt_Ten.Name = "txt_Ten";
-            this.txt_Ten.Size = new System.Drawing.Size(224, 23);
+            this.txt_Ten.Size = new System.Drawing.Size(224, 27);
             this.txt_Ten.TabIndex = 4;
             // 
             // txt_ID
@@ -169,7 +197,7 @@
             this.txt_ID.Location = new System.Drawing.Point(63, 43);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.ReadOnly = true;
-            this.txt_ID.Size = new System.Drawing.Size(224, 23);
+            this.txt_ID.Size = new System.Drawing.Size(224, 27);
             this.txt_ID.TabIndex = 4;
             // 
             // lb_Mail
@@ -214,6 +242,7 @@
             // 
             // grb_LichSu
             // 
+            this.grb_LichSu.Controls.Add(this.dgvBills);
             this.grb_LichSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_LichSu.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.grb_LichSu.Location = new System.Drawing.Point(3, 217);
@@ -223,30 +252,34 @@
             this.grb_LichSu.TabStop = false;
             this.grb_LichSu.Text = "LỊCH SỬ HOÁ ĐƠN";
             // 
-            // cb_Show
+            // dgvBills
             // 
-            this.cb_Show.AutoSize = true;
-            this.cb_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Show.Location = new System.Drawing.Point(424, 164);
-            this.cb_Show.Name = "cb_Show";
-            this.cb_Show.Size = new System.Drawing.Size(109, 17);
-            this.cb_Show.TabIndex = 8;
-            this.cb_Show.Text = "Hiện mật khẩu";
-            this.cb_Show.UseVisualStyleBackColor = true;
-            this.cb_Show.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.dgvBills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBills.Location = new System.Drawing.Point(7, 29);
+            this.dgvBills.MultiSelect = false;
+            this.dgvBills.Name = "dgvBills";
+            this.dgvBills.RowHeadersWidth = 51;
+            this.dgvBills.RowTemplate.Height = 24;
+            this.dgvBills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBills.Size = new System.Drawing.Size(967, 445);
+            this.dgvBills.TabIndex = 0;
+            this.dgvBills.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBills_CellClick);
             // 
-            // UC_TaiKhoan
+            // UC_TaiKhoan_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.Controls.Add(this.grb_LichSu);
             this.Controls.Add(this.grb_TaiKhoan);
-            this.Name = "UC_TaiKhoan";
+            this.Name = "UC_TaiKhoan_Customer";
             this.Size = new System.Drawing.Size(1000, 700);
             this.Load += new System.EventHandler(this.UC_TaiKhoan_Load);
             this.grb_TaiKhoan.ResumeLayout(false);
             this.grb_TaiKhoan.PerformLayout();
+            this.grb_LichSu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBills)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +303,7 @@
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.CheckBox cb_Show;
+        private System.Windows.Forms.DataGridView dgvBills;
+        private System.Windows.Forms.Button but_view_invoice;
     }
 }

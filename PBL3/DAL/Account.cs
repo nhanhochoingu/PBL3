@@ -19,7 +19,6 @@ namespace PBL3.DAL
         {
             this.Admins = new HashSet<Admin>();
             this.Customers = new HashSet<Customer>();
-            this.Staffs = new HashSet<Staff>();
         }
     
         public int UserID { get; set; }
@@ -32,7 +31,5 @@ namespace PBL3.DAL
         public virtual ICollection<Admin> Admins { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer> Customers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Staff> Staffs { get; set; }
     }
 }

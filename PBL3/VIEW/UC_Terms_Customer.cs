@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3.VIEW
 {
-    public partial class UC_Terms : UserControl
+    public partial class UC_Terms_Customer : UserControl
     {
-        public UC_Terms()
+        public UC_Terms_Customer()
         {
             InitializeComponent();
         }

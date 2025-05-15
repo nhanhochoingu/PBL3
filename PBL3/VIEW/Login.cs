@@ -22,7 +22,7 @@ namespace PBL3
         }
 
         
-        private _BLL bll = new _BLL();
+        private _BLL_Customer bll = new _BLL_Customer();
 
 
 

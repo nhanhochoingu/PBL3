@@ -14,12 +14,6 @@ namespace PBL3.DAL
     
     public partial class Admin
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Admin()
-        {
-            this.Bills = new HashSet<Bill>();
-        }
-    
         public int AdminID { get; set; }
         public Nullable<int> UserID { get; set; }
         public string PhoneNumber { get; set; }
@@ -27,7 +21,5 @@ namespace PBL3.DAL
         public string Email { get; set; }
     
         public virtual Account Account { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bill> Bills { get; set; }
     }
 }

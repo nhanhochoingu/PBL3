@@ -34,16 +34,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt1 = new System.Windows.Forms.TextBox();
-            this.txt2 = new System.Windows.Forms.TextBox();
-            this.txt3 = new System.Windows.Forms.TextBox();
-            this.txt4 = new System.Windows.Forms.TextBox();
-            this.txt5 = new System.Windows.Forms.TextBox();
-            this.txt6 = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtTenHienThi = new System.Windows.Forms.TextBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.butRegister = new System.Windows.Forms.Button();
             this.butExit = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt7 = new System.Windows.Forms.TextBox();
+            this.txtXacNhan = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -100,54 +100,54 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Mật Khẩu";
             // 
-            // txt1
+            // txtHoTen
             // 
-            this.txt1.Location = new System.Drawing.Point(266, 33);
-            this.txt1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(280, 22);
-            this.txt1.TabIndex = 6;
+            this.txtHoTen.Location = new System.Drawing.Point(266, 33);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(280, 22);
+            this.txtHoTen.TabIndex = 6;
             // 
-            // txt2
+            // txtTenHienThi
             // 
-            this.txt2.Location = new System.Drawing.Point(266, 73);
-            this.txt2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(280, 22);
-            this.txt2.TabIndex = 7;
+            this.txtTenHienThi.Location = new System.Drawing.Point(266, 73);
+            this.txtTenHienThi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenHienThi.Name = "txtTenHienThi";
+            this.txtTenHienThi.Size = new System.Drawing.Size(280, 22);
+            this.txtTenHienThi.TabIndex = 7;
             // 
-            // txt3
+            // txtTenDangNhap
             // 
-            this.txt3.Location = new System.Drawing.Point(266, 113);
-            this.txt3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt3.Name = "txt3";
-            this.txt3.Size = new System.Drawing.Size(280, 22);
-            this.txt3.TabIndex = 8;
+            this.txtTenDangNhap.Location = new System.Drawing.Point(266, 113);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(280, 22);
+            this.txtTenDangNhap.TabIndex = 8;
             // 
-            // txt4
+            // txtSDT
             // 
-            this.txt4.Location = new System.Drawing.Point(266, 150);
-            this.txt4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt4.Name = "txt4";
-            this.txt4.Size = new System.Drawing.Size(280, 22);
-            this.txt4.TabIndex = 9;
+            this.txtSDT.Location = new System.Drawing.Point(266, 150);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(280, 22);
+            this.txtSDT.TabIndex = 9;
             // 
-            // txt5
+            // txtEmail
             // 
-            this.txt5.Location = new System.Drawing.Point(266, 185);
-            this.txt5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt5.Name = "txt5";
-            this.txt5.Size = new System.Drawing.Size(280, 22);
-            this.txt5.TabIndex = 10;
+            this.txtEmail.Location = new System.Drawing.Point(266, 185);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(280, 22);
+            this.txtEmail.TabIndex = 10;
             // 
-            // txt6
+            // txtMatKhau
             // 
-            this.txt6.Location = new System.Drawing.Point(266, 222);
-            this.txt6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt6.Name = "txt6";
-            this.txt6.PasswordChar = '*';
-            this.txt6.Size = new System.Drawing.Size(280, 22);
-            this.txt6.TabIndex = 11;
+            this.txtMatKhau.Location = new System.Drawing.Point(266, 222);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(280, 22);
+            this.txtMatKhau.TabIndex = 11;
             // 
             // butRegister
             // 
@@ -180,30 +180,30 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Xác nhận mật khẩu";
             // 
-            // txt7
+            // txtXacNhan
             // 
-            this.txt7.Location = new System.Drawing.Point(266, 257);
-            this.txt7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt7.Name = "txt7";
-            this.txt7.PasswordChar = '*';
-            this.txt7.Size = new System.Drawing.Size(280, 22);
-            this.txt7.TabIndex = 15;
+            this.txtXacNhan.Location = new System.Drawing.Point(266, 257);
+            this.txtXacNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtXacNhan.Name = "txtXacNhan";
+            this.txtXacNhan.PasswordChar = '*';
+            this.txtXacNhan.Size = new System.Drawing.Size(280, 22);
+            this.txtXacNhan.TabIndex = 15;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 360);
-            this.Controls.Add(this.txt7);
+            this.ClientSize = new System.Drawing.Size(702, 353);
+            this.Controls.Add(this.txtXacNhan);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.butExit);
             this.Controls.Add(this.butRegister);
-            this.Controls.Add(this.txt6);
-            this.Controls.Add(this.txt5);
-            this.Controls.Add(this.txt4);
-            this.Controls.Add(this.txt3);
-            this.Controls.Add(this.txt2);
-            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.txtMatKhau);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtTenDangNhap);
+            this.Controls.Add(this.txtTenHienThi);
+            this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -226,15 +226,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt1;
-        private System.Windows.Forms.TextBox txt2;
-        private System.Windows.Forms.TextBox txt3;
-        private System.Windows.Forms.TextBox txt4;
-        private System.Windows.Forms.TextBox txt5;
-        private System.Windows.Forms.TextBox txt6;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtTenHienThi;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button butRegister;
         private System.Windows.Forms.Button butExit;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt7;
+        private System.Windows.Forms.TextBox txtXacNhan;
     }
 }

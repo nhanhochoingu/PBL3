@@ -1,6 +1,6 @@
 ﻿namespace PBL3.VIEW
 {
-    partial class UC_Booking
+    partial class UC_Booking_Customer
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.but_SeePrice = new System.Windows.Forms.Button();
+            this.but_Service = new System.Windows.Forms.Button();
             this.but_YourPitch = new System.Windows.Forms.Button();
             this.but_SeeAllPitch = new System.Windows.Forms.Button();
             this.but_Book = new System.Windows.Forms.Button();
             this.cb_Minutes = new System.Windows.Forms.ComboBox();
             this.cb_StartTime = new System.Windows.Forms.ComboBox();
             this.cb_PitchType = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,14 +51,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.but_SeePrice);
+            this.groupBox1.Controls.Add(this.but_Service);
             this.groupBox1.Controls.Add(this.but_YourPitch);
             this.groupBox1.Controls.Add(this.but_SeeAllPitch);
             this.groupBox1.Controls.Add(this.but_Book);
             this.groupBox1.Controls.Add(this.cb_Minutes);
             this.groupBox1.Controls.Add(this.cb_StartTime);
             this.groupBox1.Controls.Add(this.cb_PitchType);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtp);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -72,15 +72,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ĐẶT SÂN";
             // 
-            // but_SeePrice
+            // but_Service
             // 
-            this.but_SeePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_SeePrice.Location = new System.Drawing.Point(761, 84);
-            this.but_SeePrice.Name = "but_SeePrice";
-            this.but_SeePrice.Size = new System.Drawing.Size(132, 29);
-            this.but_SeePrice.TabIndex = 3;
-            this.but_SeePrice.Text = "Xem Giá Sân";
-            this.but_SeePrice.UseVisualStyleBackColor = true;
+            this.but_Service.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_Service.Location = new System.Drawing.Point(761, 84);
+            this.but_Service.Name = "but_Service";
+            this.but_Service.Size = new System.Drawing.Size(132, 29);
+            this.but_Service.TabIndex = 3;
+            this.but_Service.Text = "Dịch Vụ";
+            this.but_Service.UseVisualStyleBackColor = true;
+            this.but_Service.Click += new System.EventHandler(this.but_Service_Click);
             // 
             // but_YourPitch
             // 
@@ -91,6 +92,7 @@
             this.but_YourPitch.TabIndex = 3;
             this.but_YourPitch.Text = "Sân Của Bạn";
             this.but_YourPitch.UseVisualStyleBackColor = true;
+            this.but_YourPitch.Click += new System.EventHandler(this.but_YourPitch_Click);
             // 
             // but_SeeAllPitch
             // 
@@ -167,14 +169,14 @@
             this.cb_PitchType.Size = new System.Drawing.Size(145, 24);
             this.cb_PitchType.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dtp
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(400, 38);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(145, 22);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp.Location = new System.Drawing.Point(400, 38);
+            this.dtp.Name = "dtp";
+            this.dtp.Size = new System.Drawing.Size(145, 22);
+            this.dtp.TabIndex = 1;
             // 
             // label4
             // 
@@ -230,6 +232,7 @@
             // 
             // dgv
             // 
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(6, 29);
             this.dgv.Name = "dgv";
@@ -237,6 +240,7 @@
             this.dgv.RowTemplate.Height = 24;
             this.dgv.Size = new System.Drawing.Size(978, 441);
             this.dgv.TabIndex = 0;
+            this.dgv.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellValueChanged);
             // 
             // UC_Booking
             // 
@@ -265,11 +269,11 @@
         private System.Windows.Forms.ComboBox cb_Minutes;
         private System.Windows.Forms.ComboBox cb_StartTime;
         private System.Windows.Forms.ComboBox cb_PitchType;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button but_Book;
-        private System.Windows.Forms.Button but_SeePrice;
+        private System.Windows.Forms.Button but_Service;
         private System.Windows.Forms.Button but_SeeAllPitch;
         private System.Windows.Forms.Button but_YourPitch;
         private System.Windows.Forms.DataGridView dgv;

@@ -20,7 +20,7 @@ namespace PBL3.DAL
         public Nullable<int> Quantity { get; set; }
         public Nullable<decimal> UnitPrice { get; set; }
     
-        public virtual Bill Bill { get; set; }
         public virtual Drink Drink { get; set; }
+        public virtual Bill Bill { get; set; }
     }
 }

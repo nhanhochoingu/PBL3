@@ -14,20 +14,11 @@ namespace PBL3.DAL
     
     public partial class Staff
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Staff()
-        {
-            this.StaffSchedules = new HashSet<StaffSchedule>();
-        }
-    
         public int StaffID { get; set; }
-        public Nullable<int> UserID { get; set; }
         public string StaffSDT { get; set; }
         public string StaffName { get; set; }
         public string StaffEmail { get; set; }
-    
-        public virtual Account Account { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StaffSchedule> StaffSchedules { get; set; }
+        public decimal Coefficient { get; set; }
+        public int Worktime { get; set; }
     }
 }

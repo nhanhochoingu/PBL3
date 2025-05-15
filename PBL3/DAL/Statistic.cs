@@ -15,9 +15,11 @@ namespace PBL3.DAL
     public partial class Statistic
     {
         public int StatisticID { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.DateTime> StartTime { get; set; }
         public Nullable<decimal> TotalRevenue { get; set; }
-        public Nullable<int> TotalBookings { get; set; }
-        public Nullable<int> TotalDrinksSold { get; set; }
+        public Nullable<decimal> TotalBookings { get; set; }
+        public Nullable<decimal> TotalDrinksSold { get; set; }
+        public Nullable<System.DateTime> EndTime { get; set; }
+        public Nullable<int> TotalBookedPitch { get; set; }
     }
 }

@@ -13,13 +13,15 @@ using PBL3.DAL;
 
 namespace PBL3.VIEW
 {
-    public partial class UC_TaiKhoan : UserControl
+    public partial class UC_TaiKhoan_Customer : UserControl
     {
-        public UC_TaiKhoan()
+        private int selectedBillId = -1; // Biến lưu trữ ID của hóa đơn được chọn
+        public UC_TaiKhoan_Customer()
         {
             InitializeComponent();
+            LoadLichSuHoaDon();
         }
-        private _BLL bll = new _BLL();
+        private _BLL_Customer bll = new _BLL_Customer();
         private void UC_TaiKhoan_Load(object sender, EventArgs e)
         {
             int userId = UserSession.LoggedInUserID;
@@ -101,6 +103,36 @@ namespace PBL3.VIEW
             {
                 // Ẩn mật khẩu bằng dấu *
                 txt_Password.PasswordChar = '*';
+            }
+        }
+        private void LoadLichSuHoaDon()
+        {
+            int userId = UserSession.LoggedInUserID;
+            var hoaDon = bll.GetBillsByCustomer(userId);
+            dgvBills.DataSource = hoaDon;
+
+            // Tùy chọn: định dạng số tiền
+            dgvBills.Columns["Total"].DefaultCellStyle.Format = "N0";
+            dgvBills.Columns["Total"].HeaderText = "Tổng tiền (VNĐ)";
+        }
+
+        private void but_view_invoice_Click(object sender, EventArgs e)
+        {
+            if (selectedBillId == -1)
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn!");
+                return;
+            }
+
+            Invoice f = new Invoice(selectedBillId);
+            f.ShowDialog();
+        }
+
+        private void dgvBills_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                selectedBillId = Convert.ToInt32(dgvBills.Rows[e.RowIndex].Cells["BillID"].Value);
             }
         }
     }
