@@ -9,7 +9,7 @@ namespace PBL3.BLL
 {
     public class _BLL_Admin
     {
-        _DAL_Admin dal = new _DAL_Admin();
+        private _DAL_Admin dal = new _DAL_Admin();
         public List<Customer> GetAll()
         {
             return dal.GetAllCustomers();
