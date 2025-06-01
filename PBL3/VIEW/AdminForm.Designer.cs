@@ -96,9 +96,9 @@
             this.Title.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Title.Location = new System.Drawing.Point(585, 4);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(424, 53);
+            this.Title.Size = new System.Drawing.Size(408, 53);
             this.Title.TabIndex = 0;
-            this.Title.Text = "Managerment System";
+            this.Title.Text = "Management System";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // sidebar

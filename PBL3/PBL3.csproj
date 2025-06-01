@@ -175,12 +175,6 @@
     <Compile Include="VIEW\SelectPitchForm.Designer.cs">
       <DependentUpon>SelectPitchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\StaffForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VIEW\StaffForm.Designer.cs">
-      <DependentUpon>StaffForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="VIEW\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,9 +273,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\SelectPitchForm.resx">
       <DependentUpon>SelectPitchForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\StaffForm.resx">
-      <DependentUpon>StaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\UC_Booking_Customer.resx">
       <DependentUpon>UC_Booking_Customer.cs</DependentUpon>

@@ -66,10 +66,6 @@ namespace PBL3
                     AdminForm adminForm = new AdminForm();
                     adminForm.ShowDialog();
                     break;
-                case "staff":
-                    StaffForm staffForm = new StaffForm();
-                    staffForm.ShowDialog();
-                    break;
                 case "customer":
                     // Lưu ID người dùng vào UserSession với tư cách là 1 biến tĩnh
                     UserSession.LoggedInUserID = account.UserID;
