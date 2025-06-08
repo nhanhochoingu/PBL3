@@ -92,17 +92,8 @@ namespace PBL3.VIEW
         {
             DateTime selectedDate = dtp.Value.Date;
 
-            var data = schedulebll.GetSchedulesByDate(selectedDate)
-                .Select(p => new
-                {
-                    p.ScheduleID,
-                    p.Pitch.PitchName,
-                    p.Customer.Name,
-                    Ngay = p.Date.HasValue ? p.Date.Value.ToString("dd/MM/yyyy") : "",
-                    BatDau = p.StartTime.HasValue ? p.StartTime.Value.ToString(@"hh\:mm") : "",
-                    KetThuc = p.EndTime.HasValue ? p.EndTime.Value.ToString(@"hh\:mm") : "",
-                    p.Status
-                }).ToList();
+            
+            var data = schedulebll.GetDisplayScheduleByDate(selectedDate);
 
             dgv.DataSource = data;
             dgv.ClearSelection();

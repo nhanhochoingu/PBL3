@@ -112,6 +112,35 @@ namespace PBL3.BLL
         {
             return dal.GetLichSanDaDat(customerId);
         }
+
+        //public List<object> GetLichSanDaDat(int userId)
+        //{
+        //    var rawList = dal.GetLichSanDaDat(userId);
+
+        //    return rawList.Select(item => new
+        //    {
+        //        item.ScheduleID,
+        //        item.PitchName,
+        //        item.PitchType,
+        //        item.Date,
+        //        item.StartTime,
+        //        item.EndTime,
+        //        PitchPrice = item.PitchPrice,
+        //        TongTien = (GetDurationMinutes(item.StartTime, item.EndTime) == 90
+        //                    ? item.PitchPrice * 1.75m
+        //                    : item.PitchPrice) + item.TienNuoc
+        //    }).ToList<object>();
+        //}
+
+        //private int GetDurationMinutes(TimeSpan? start, TimeSpan? end)
+        //{
+        //    if (start.HasValue && end.HasValue)
+        //        return (int)(end.Value - start.Value).TotalMinutes;
+
+        //    return 0;
+        //}
+
+
         public List<object> GetBillsByCustomer(int customerId)
         {
             return dal.GetBillsByCustomer(customerId);
@@ -120,6 +149,30 @@ namespace PBL3.BLL
         {
             dal.AddCustomer(cus);
         }
+
+        public List<Pitch> GetDisplayPitches(List<Pitch> allPitches, List<Pitch> bookedPitches, int duration)
+        {
+            return allPitches.Select(p => new Pitch
+            {
+                PitchID = p.PitchID,
+                PitchName = p.PitchName,
+                PitchType = p.PitchType,
+                PitchStatus = bookedPitches.Any(bp => bp.PitchID == p.PitchID) ? "Đã đặt" : "Trống",
+                PitchPrice = (duration == 90) ? (p.PitchPrice ?? 0) * 1.75m : (p.PitchPrice ?? 0)
+            }).ToList();
+        }
+
+        public List<Drink> GetDrinksForDisplay()
+        {
+            return dal.GetAllDrinks()
+                .Select(d => new Drink
+                {
+                    DrinkID = d.DrinkID,
+                    DrinkName = d.DrinkName,
+                    DrinkPrice = d.DrinkPrice ?? 0
+                }).ToList();
+        }
+
 
 
 

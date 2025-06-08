@@ -15,5 +15,19 @@ namespace PBL3.BLL
         {
             return dal.GetStatisticByDateRange(startDate, endDate);
         }
+        public List<object> GetFormattedStatistic(DateTime from, DateTime to)
+        {
+            var rawList = dal.GetStatisticByDateRange(from, to);
+
+            return rawList.Select(s => new
+            {
+                s.StartTime,
+                s.EndTime,
+                s.TotalRevenue,
+                s.TotalBookings,
+                s.TotalDrinksSold,
+                s.TotalBookedPitch
+            }).ToList<object>();
+        }
     }
 }

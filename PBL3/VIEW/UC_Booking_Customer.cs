@@ -27,13 +27,11 @@ namespace PBL3.VIEW
             dgv.ReadOnly = true; // Khi không cần chỉnh sửa
 
 
-            // Xóa cột "Số lượng","Tổng Tiền" và "Thành tiền" nếu đã tồn tại
+            // Xóa cột "Số lượng" và "Thành tiền" nếu đã tồn tại
             if (dgv.Columns.Contains("SoLuong"))
                 dgv.Columns.Remove("SoLuong");
             if (dgv.Columns.Contains("ThanhTien"))
                 dgv.Columns.Remove("ThanhTien");
-            if (dgv.Columns.Contains("TongTien"))
-                dgv.Columns.Remove("TongTien");
 
             if (cb_PitchType.SelectedIndex == -1 || cb_StartTime.SelectedIndex == -1 || cb_Minutes.SelectedIndex == -1)
             {
@@ -52,21 +50,15 @@ namespace PBL3.VIEW
 
             // Lấy danh sách sân đã được đặt
             List<Pitch> bookedPitches = bll.GetBookedPitches(pitchType, date, start, end);
+                
 
-            
-            // Gộp dữ liệu để hiển thị
-            var data = allPitches.Select(p => new
-            {
-                p.PitchName,
-                p.PitchType,
-                p.PitchID,
-                PitchStatus = bookedPitches.Any(bp => bp.PitchID == p.PitchID) ? "Đã đặt" : "Trống",
-                PitchPrice = (duration == 90) ? p.PitchPrice * 1.75m : p.PitchPrice
-            }).ToList();
+            var data = bll.GetDisplayPitches(allPitches, bookedPitches, duration);
 
             dgv.DataSource = data;
 
-            //dgv.DataSource = bll.GetAllPitch();
+            //Không hiển thị navigation property
+            dgv.Columns["Bills"].Visible = false;
+            dgv.Columns["PitchSchedules"].Visible = false;
         }
 
         private void but_Book_Click(object sender, EventArgs e)
@@ -192,8 +184,6 @@ namespace PBL3.VIEW
                 dgv.Columns.Remove("SoLuong");
             if (dgv.Columns.Contains("ThanhTien"))
                 dgv.Columns.Remove("ThanhTien");
-            if (dgv.Columns.Contains("TongTien"))
-                dgv.Columns.Remove("TongTien");
         }
 
         private void but_Service_Click(object sender, EventArgs e)
@@ -201,16 +191,10 @@ namespace PBL3.VIEW
             dgv.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgv.ReadOnly = false; // Cho phép nhập số lượng
 
-            if (dgv.Columns.Contains("TongTien"))
-                dgv.Columns.Remove("TongTien");
-            dgv.DataSource = bll.GetAllDrinks()
-                                    .Select(d => new
-                                    {
-                                        d.DrinkID,
-                                        d.DrinkName,
-                                        d.DrinkPrice
-                                    }).ToList();
 
+            dgv.DataSource = bll.GetDrinksForDisplay();
+
+            dgv.Columns["BillDetails"].Visible = false;
 
             // Thêm cột nhập số lượng nếu chưa có
             if (!dgv.Columns.Contains("SoLuong"))
@@ -264,6 +248,7 @@ namespace PBL3.VIEW
 
         }
 
+        // Tính "Thành Tiền" khi nhập số lượng nước
         private void dgv_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if(dgv.Columns[e.ColumnIndex].Name == "SoLuong")

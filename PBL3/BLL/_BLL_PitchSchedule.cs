@@ -23,6 +23,24 @@ namespace PBL3.BLL
         {
             return dal.GetPitchBookingStatistics();
         }
+        public List<object> GetDisplayScheduleByDate(DateTime date)
+        {
+            var list = dal.GetAllBooked(date);
+
+            var result = list.Select(p => new
+            {
+                p.ScheduleID,
+                PitchName = p.Pitch?.PitchName ?? "",
+                CustomerName = p.Customer?.Name ?? "",
+                Date = p.Date,
+                StartTime = p.StartTime,
+                EndTime = p.EndTime,
+                p.Status
+            }).ToList<object>(); 
+
+            return result;
+        }
+
 
     }
 }

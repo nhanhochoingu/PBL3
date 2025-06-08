@@ -17,5 +17,19 @@ namespace PBL3.BLL
         {
             return dal.AddStaff(staff);
         }
+        public List<object> GetFormattedStaffList()
+        {
+            return dal.GetAllStaff()
+                      .Select(s => new
+                      {
+                          s.StaffID,
+                          s.StaffName,
+                          s.StaffSDT,
+                          s.StaffEmail,
+                          s.Coefficient,
+                          s.Worktime
+                      }).ToList<object>();
+        }
+
     }
 }

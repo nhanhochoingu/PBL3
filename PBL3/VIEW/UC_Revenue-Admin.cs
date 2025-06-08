@@ -46,18 +46,7 @@ namespace PBL3.VIEW
                 start = end.AddDays(-7);
             }
 
-            var data = bll.GetStatistic(start, end)
-                .Select(s => new
-                {
-                    s.StartTime,
-                    s.EndTime,
-                    s.TotalRevenue,
-                    s.TotalBookings,
-                    s.TotalDrinksSold,
-                    s.TotalBookedPitch
-                })
-                .ToList();
-
+            var data = bll.GetFormattedStatistic(start, end);
             dgv.DataSource = data;
             currentDgvMode = DgvMode.Statistic;
             dgv.ClearSelection();
@@ -97,16 +86,7 @@ namespace PBL3.VIEW
 
         private void but_refresh_Click(object sender, EventArgs e)
         {
-            dgv.DataSource = bllStaff.GetAllStaff()
-        .Select(s => new
-        {
-            s.StaffID,
-            s.StaffName,
-            s.StaffSDT,
-            s.StaffEmail,
-            s.Coefficient,
-            s.Worktime
-        }).ToList();
+            dgv.DataSource = bllStaff.GetFormattedStaffList();
             dgv.ClearSelection();
             selectedStaffID = -1;
             currentDgvMode = DgvMode.Staff;
